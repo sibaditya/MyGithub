@@ -71,6 +71,7 @@ dependencies {
     implementation(libs.retrofit)
     // gson converter
     implementation(libs.converter.gson)
+    implementation(libs.converter.scalars)
     implementation(libs.logging.interceptor)
     // Navigation Component
     implementation(libs.androidx.navigation.fragment.ktx)
@@ -80,6 +81,8 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     //For fragment
     implementation(libs.androidx.fragment.ktx)
+
+    implementation(libs.kotlinx.serialization.json)
 
     //hilt
     implementation (libs.hilt.android)

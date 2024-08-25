@@ -3,4 +3,11 @@
     <string name="username_hint">Enter Username to search</string>
     <string name="search_button_cta">Search</string>
     <string name="something_went_wrong">Something went wrong</string>
+    <string name="repo_details">Repo Details</string>
+    <string name="repo_owner">Repo Owner : %s</string>
+    <string name="repo_public_url">Repo Public Url : %s</string>
+    <string name="repo_public_visibility">Repo Public Visibility : %s</string>
+    <string name="repo_description">Repo Description : %s</string>
+    <string name="repo_created_at">Repo Created At : %s</string>
+    <string name="repo_updated_at">Repo Updated At : %s</string>
 </resources>

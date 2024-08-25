@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import com.example.example.GithubUserRepoModal
 import com.example.mygithub.api.ApiResponse
 import com.example.mygithub.api.ApiService
-import com.example.mygithub.modal.GitHubUserRepoList
 import com.example.mygithub.modal.GithubUserModel
 import javax.inject.Inject
 

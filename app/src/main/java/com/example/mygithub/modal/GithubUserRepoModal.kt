@@ -1,6 +1,12 @@
 package com.example.example
 
+import android.annotation.SuppressLint
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.Locale
 
 
 data class GithubUserRepoModal(
@@ -83,4 +89,18 @@ data class GithubUserRepoModal(
     @SerializedName("open_issues") var openIssues: Int? = null,
     @SerializedName("watchers") var watchers: Int? = null,
     @SerializedName("default_branch") var defaultBranch: String? = null
-)
+) : Serializable {
+    @SuppressLint("SimpleDateFormat")
+    fun getCreatedDateAsString(): String? {
+        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+        var consultationDate = sdf.parse(createdAt)
+        return consultationDate.date.toString()
+    }
+
+    @SuppressLint("SimpleDateFormat")
+    fun getUpdatedDateAsString(): String? {
+        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+        var consultationDate = sdf.parse(updatedAt)
+        return consultationDate.date.toString()
+    }
+}

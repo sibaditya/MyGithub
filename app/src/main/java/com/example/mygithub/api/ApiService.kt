@@ -1,7 +1,6 @@
 package com.example.mygithub.api
 
 import com.example.example.GithubUserRepoModal
-import com.example.mygithub.modal.GitHubUserRepoList
 import com.example.mygithub.modal.GithubUserModel
 import retrofit2.Response
 import retrofit2.http.GET

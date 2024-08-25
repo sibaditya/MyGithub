@@ -2,8 +2,10 @@ package com.example.mygithub.modal
 
 import android.annotation.SuppressLint
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 import java.text.SimpleDateFormat
 import java.util.Date
+
 
 data class GithubUserModel(
     @SerializedName("id") var id: Long,
@@ -38,16 +40,4 @@ data class GithubUserModel(
     @SerializedName("following") var following: Int,
     @SerializedName("created_at") var createdAt: Date,
     @SerializedName("updated_at") var updatedAt: Date
-) {
-    @SuppressLint("SimpleDateFormat")
-    fun getCreatedDateAsString(): String? {
-        val formatter = SimpleDateFormat("dd MMMM yyyy, hh:mm:ss");
-        return formatter.format(createdAt)
-    }
-
-    @SuppressLint("SimpleDateFormat")
-    fun getUpdatedDateAsString(): String? {
-        val formatter = SimpleDateFormat("dd MMMM yyyy, hh:mm:ss");
-        return formatter.format(updatedAt)
-    }
-}
+): Serializable

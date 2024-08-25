@@ -7,7 +7,6 @@ import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import com.example.example.GithubUserRepoModal
 import com.example.mygithub.api.ApiResponse
-import com.example.mygithub.modal.GitHubUserRepoList
 import com.example.mygithub.modal.GithubUserModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

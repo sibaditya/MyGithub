@@ -12,6 +12,6 @@ class MainActivity: AppCompatActivity() {
         val userRepoListFragment = UserRepoListFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, userRepoListFragment)
-            .commit();
+            .commit()
     }
 }
