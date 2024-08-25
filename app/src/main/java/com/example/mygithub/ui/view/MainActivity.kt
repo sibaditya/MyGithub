@@ -1,7 +1,8 @@
-package com.example.mygithub
+package com.example.mygithub.ui.view
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mygithub.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

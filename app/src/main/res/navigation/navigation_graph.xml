@@ -5,7 +5,7 @@
     app:startDestination="@id/userRepoListFragment">
     <fragment
         android:id="@+id/userRepoListFragment"
-        android:name="com.example.mygithub.UserRepoListFragment"
+        android:name="com.example.mygithub.ui.view.UserRepoListFragment"
         android:label="UserRepoListFragment" >
         <action
             android:id="@+id/action_userRepoListFragment_to_userRepoDetailsFragment"
@@ -13,6 +13,6 @@
     </fragment>
     <fragment
         android:id="@+id/userRepoDetailsFragment"
-        android:name="com.example.mygithub.UserRepoDetailsFragment"
+        android:name="com.example.mygithub.ui.view.UserRepoDetailsFragment"
         android:label="UserRepoDetailsFragment" />
 </navigation>

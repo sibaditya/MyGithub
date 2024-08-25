@@ -1,4 +1,4 @@
-package com.example.mygithub
+package com.example.mygithub.domain
 
 interface UserRepoListUseCase {
     companion object {

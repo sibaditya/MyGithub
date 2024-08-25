@@ -1,4 +1,4 @@
-package com.example.mygithub
+package com.example.mygithub.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +12,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.example.GithubUserRepoModal
+import com.example.mygithub.R
+import com.example.mygithub.ui.viewmodel.UserRepoListViewModel
 import com.example.mygithub.api.ApiResponse
 import com.example.mygithub.databinding.FragmentUserRepoListBinding
 import com.example.mygithub.modal.GithubUserModel

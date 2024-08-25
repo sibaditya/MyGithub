@@ -1,9 +1,7 @@
-package com.example.mygithub
+package com.example.mygithub.ui.viewmodel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asFlow
 import androidx.lifecycle.viewModelScope
 import com.example.example.GithubUserRepoModal
 import com.example.mygithub.api.ApiResponse

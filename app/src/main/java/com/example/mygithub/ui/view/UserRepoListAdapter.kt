@@ -1,4 +1,4 @@
-package com.example.mygithub
+package com.example.mygithub.ui.view
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.example.GithubUserRepoModal
+import com.example.mygithub.R
 
 class UserRepoListAdapter(
     private val githubUserRepoList: ArrayList<GithubUserRepoModal>?,

@@ -1,4 +1,4 @@
-package com.example.mygithub
+package com.example.mygithub.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.example.example.GithubUserRepoModal
+import com.example.mygithub.R
 import com.example.mygithub.databinding.FragmentUserRepoDetailsBinding
-import com.example.mygithub.databinding.FragmentUserRepoListBinding
 
 class UserRepoDetailsFragment: Fragment(R.layout.fragment_user_repo_details) {
     private var _binding: FragmentUserRepoDetailsBinding? = null

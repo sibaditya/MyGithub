@@ -1,7 +1,6 @@
 package np.com.bimalkafle.util
 
-import android.widget.Toast
-import com.example.mygithub.UserRepoListFragment
+import com.example.mygithub.ui.view.UserRepoListFragment
 
 object UiUtil {
 
