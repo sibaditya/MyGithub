@@ -8,9 +8,10 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
+import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 
@@ -23,18 +24,11 @@ class NetworkModule {
     fun providesRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(RetrofitHelper.BASE_URL)
-            .addConverterFactory(ScalarsConverterFactory.create())
-            .addConverterFactory(GsonConverterFactory.create(GsonBuilder()
-                .setLenient()
-                .create()))
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(OkHttpClient.Builder().addInterceptor { chain ->
-                val originalRequest = chain.request()
-                val newUrl = originalRequest.url.newBuilder()
-                    .build()
-                val newRequest = originalRequest.newBuilder().url(newUrl).build()
-                chain.proceed(newRequest)
-            }.build())
+            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
+            .client(OkHttpClient().newBuilder().addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC))
+                .connectTimeout(10000L, TimeUnit.MILLISECONDS)
+                .readTimeout(10000L, TimeUnit.MILLISECONDS)
+                .writeTimeout(10000L, TimeUnit.MILLISECONDS).build())
             .build()
     }
 

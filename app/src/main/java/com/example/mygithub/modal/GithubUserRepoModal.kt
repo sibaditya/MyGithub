@@ -3,10 +3,9 @@ package com.example.example
 import android.annotation.SuppressLint
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
+import java.text.DateFormat
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.util.Locale
+import java.util.Date
 
 
 data class GithubUserRepoModal(
@@ -92,15 +91,19 @@ data class GithubUserRepoModal(
 ) : Serializable {
     @SuppressLint("SimpleDateFormat")
     fun getCreatedDateAsString(): String? {
-        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-        var consultationDate = sdf.parse(createdAt)
-        return consultationDate.date.toString()
+        val inputFormat: DateFormat = SimpleDateFormat("yyyy-mm-dd'T'HH:mm:ss'Z'")
+        val date: Date = inputFormat.parse(createdAt)
+
+        val outputFormat: DateFormat = SimpleDateFormat("dd-MMM-yyyy")
+        return outputFormat.format(date)
     }
 
     @SuppressLint("SimpleDateFormat")
     fun getUpdatedDateAsString(): String? {
-        val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
-        var consultationDate = sdf.parse(updatedAt)
-        return consultationDate.date.toString()
+        val inputFormat: DateFormat = SimpleDateFormat("yyyy-mm-dd'T'HH:mm:ss'Z'")
+        val date: Date = inputFormat.parse(updatedAt)
+
+        val outputFormat: DateFormat = SimpleDateFormat("dd-MMM-yyyy")
+        return outputFormat.format(date)
     }
 }
