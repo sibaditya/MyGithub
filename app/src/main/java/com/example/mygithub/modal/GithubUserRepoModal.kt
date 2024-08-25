@@ -74,7 +74,7 @@ data class GithubUserRepoModal(
     @SerializedName("has_wiki") var hasWiki: Boolean? = null,
     @SerializedName("has_pages") var hasPages: Boolean? = null,
     @SerializedName("has_discussions") var hasDiscussions: Boolean? = null,
-    @SerializedName("forks_count") var forksCount: Int? = null,
+    @SerializedName("forks_count") var forksCount: Int = 0,
     @SerializedName("mirror_url") var mirrorUrl: String? = null,
     @SerializedName("archived") var archived: Boolean? = null,
     @SerializedName("disabled") var disabled: Boolean? = null,

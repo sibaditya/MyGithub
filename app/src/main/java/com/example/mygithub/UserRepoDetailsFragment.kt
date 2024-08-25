@@ -41,6 +41,11 @@ class UserRepoDetailsFragment: Fragment(R.layout.fragment_user_repo_details) {
             binding.gitRepoDescription.text = getString(R.string.repo_description, data.description)
             binding.repoCreatedAt.text = getString(R.string.repo_created_at, data.getCreatedDateAsString())
             binding.repoUpdatedAt.text = getString(R.string.repo_updated_at, data.getUpdatedDateAsString())
+            if (data.forksCount >= 5000) {
+                binding.badgeIcon.visibility = View.VISIBLE
+            } else {
+                binding.badgeIcon.visibility = View.GONE
+            }
         }
     }
 }
